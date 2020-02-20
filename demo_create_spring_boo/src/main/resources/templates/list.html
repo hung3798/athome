@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>test Spring Thymeleaf</title>
+</head>
+<body>
+<table border="1">
+    <a th:href="@{/addPerson}">create new person</a>
+    <a th:href="@{/deletePerson}">delete person</a>
+    <tr>
+        <th>Ten</th>
+        <th>Dia Chi</th>
+    </tr>
+    <tr th:each="person: ${persons}">
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.address}"></td>
+    </tr>
+</table>
+</body>
+</html>
